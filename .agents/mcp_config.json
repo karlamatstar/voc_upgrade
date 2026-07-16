@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "vocMcp": {
+      "command": "D:\\voc\\.venv\\Scripts\\python.exe",
+      "args": [
+        "D:\\voc\\main.py"
+      ]
+    }
+  }
+}

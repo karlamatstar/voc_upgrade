@@ -1,0 +1,13 @@
+{
+  "run_id": "20260716_111903_989269",
+  "experiment": "A",
+  "generation_provider": "openai",
+  "judge_provider": "anthropic",
+  "max_attempts": 1,
+  "fallback": false,
+  "status": "completed",
+  "started_at": "2026-07-16T11:19:03+09:00",
+  "finished_at": "2026-07-16T11:26:35+09:00",
+  "output_dir": "D:\\voc\\quality_diagnosis\\reports\\cross_validation\\a",
+  "error": null
+}

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "run_id": "20260715_143539_908132",
+  "runner": "llm_judge",
+  "status": "completed",
+  "started_at": "2026-07-15T14:35:39+09:00",
+  "finished_at": "2026-07-15T15:14:27+09:00",
+  "configured_models": "anthropic:claude-sonnet-5 -> openai:gpt-5.4-mini",
+  "case_counts": {
+    "total_defined": 20,
+    "judge_target": 18,
+    "processed": 18,
+    "scored": 16,
+    "na": 0,
+    "not_scored": 2
+  },
+  "case_results": [
+    {
+      "case_id": "TC-01",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 82.0,
+      "verdict": "조건부 배포 가능, 개선 후 재검증",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 두 핵심 문제(앱 오류, 안내 지연)를 필터에 모두 반영해 정확도가 높다. Retriever는 두 건 모두 관련성이 높지만 표본이 매우 적어 다양성 확보가 부족하다. Summarizer는 원문의 두 이슈를 왜곡 없이 요약했고, Evaluator는 근거와 점수가 일관되어 타당하다. Critic은 need_refine=false로 처리했지만 표본 수가 2건뿐이라는 한계와 required_output 중 '원인 추정'이 명시적으로 분리되지 않은 구조적 문제를 지적하지 못해 위험 탐지력이 낮다. Improver는 담당팀·기한·구체 조치를 명시해 실행 가능성이 높으며, Agent 간 연계는 자연스럽게 이어졌으나 표본 부족 문제가 전달되지 않았다. 로그는 Retriever 미리보기 등 추적 가능한 정보를 제공했으나, 응답시간 116.67초는 수업 시연 기준으로 다소 느리다."
+    },
+    {
+      "case_id": "TC-02",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 79.0,
+      "verdict": "주요 개선 필요",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 핵심 키워드(팩스, 이메일, 접수 확인, 절차 보완)를 필터에 잘 반영했다. Retriever는 두 건의 관련 VOC(이메일·팩스 제출 후 접수 확인 지연)를 정확히 검색했으나 표본이 적어 '공통 불편' 비교에는 다소 부족하다. Summarizer는 원문 내용을 왜곡 없이 사실 중심으로 요약했다. Evaluator는 S2를 '처리 결과를 즉시 알 수 없다'는 표현 때문에 높이 평가했으나, 이는 Critic이 이후 원문에 없는 일반화라고 정확히 지적한 부분이라 평가 근거의 일관성이 떨어진다. Critic은 원문에 없는 해석 확장을 정확히 잡아내 위험 탐지력이 우수했고, 최종 요약에 반영된 것으로 보인다. Improver는 부서·기한·방법을 구체적으로 제시했으나 '공통 불편'과 '고객 안내' 섹션이 명시적으로 분리되지 않아 요구된 출력 구조를 완전히 충족하지 못했다. Agent 간 연계는 Critic의 수정 요청이 최종 요약에 반영된 점에서 양호하나 Evaluator와 Critic 간 판단 불일치가 흐름의 일관성을 해친다. 로그는 각 단계 처리 결과가 투명하게 기록되어 있으나 세부 오류 로그는 없다. 응답시간 120초는 수업 시연 기준으로 다소 길다."
+    },
+    {
+      "case_id": "TC-03",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 60.0,
+      "verdict": "배포 보류",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 두 축(지급 지연, 설명 부족)을 필터에 반영해 적절했고 Retriever도 두 주제를 모두 포함한 3건을 검색해 관련성이 높았다. 그러나 Summarizer는 CUST043의 '지급 지연' 사례를 완전히 누락하고 '설명 부족·거절 사유' 문제만 요약해 질문에서 요구한 공통 원인 분석의 절반을 놓쳤다. Evaluator는 그 불완전한 요약을 근거로 내적으로는 일관된 평가를 했으나 누락 문제를 지적하지 못했고, Critic 역시 need_refine=false로 처리해 핵심 위험(지연 이슈 누락)을 전혀 탐지하지 못했다. Improver의 정책안은 담당자·기한·실행방법이 구체적이어서 실행 가능성은 있으나, required_output에 명시된 '공통 문제/고객 영향/원인 추정'이 명시적으로 구조화되지 않았고 지급 지연 관련 개선안이 전무해 완전성이 떨어진다. 로그는 각 단계가 투명하게 기록되어 추적 가능하지만, 응답시간 116초는 수업 시연용으로는 다소 길다."
+    },
+    {
+      "case_id": "TC-04",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 83.0,
+      "verdict": "조건부 배포 가능, 개선 후 재검증",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 핵심 키워드(약관, 보장, 면책, 설명 부족, 이해도)를 필터로 정확히 반영했다. Retriever는 약관·보장 설명 부족 관련 VOC를 적절히 검색했으나 count=5 중 3건만 미리보기로 확인 가능해 완전성 검증이 어렵다. Summarizer는 원문의 핵심 불만(이해 어려움, 설명 부족, 오해, 보장 범위 파악 곤란)을 왜곡 없이 정리했다. Evaluator는 S0 선택 근거를 구체적으로 제시했으나 다른 후보 대비 상세 비교가 부족해 완전한 일관성은 다소 부족하다. Critic은 원문에 없는 세부사항 추가를 금지하고 수치·상품명 등 근거 없는 요소를 배제하도록 적절히 지적했다. Improver는 우선순위별 실행 주체·기한·방법을 구체적으로 제시했으나, required_output에서 요구하는 '공통 문제', '고객 영향', '고객 안내' 섹션이 명시적으로 분리되어 있지 않아 형식적 완성도가 다소 부족하다. Agent 간 연계는 Retriever→Summarizer→Evaluator→Critic→Improver 흐름이 논리적으로 이어졌다. 로그는 각 단계 결과가 투명하게 기록되어 추적 가능하며, 응답시간 96초는 시연용으로 허용 가능한 수준이나 다소 느리다."
+    },
+    {
+      "case_id": "TC-05",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 77.0,
+      "verdict": "주요 개선 필요",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter와 Retriever는 질문 의도에 맞는 필터와 관련 VOC를 잘 포착했고, Summarizer도 두 사례의 핵심을 왜곡 없이 반영했다. 다만 required_output인 '지연 구간'과 '고객 영향'에 대한 명시적 정리가 최종 결과에 없음에도 Critic이 need_refine=false로 판단해 위험 탐지력이 크게 부족하다. Improver의 개선안은 담당자·팀·기한이 구체적이라 실행 가능성은 높으나, 지연 구간별 분석과 고객 영향 서술이 빠져 필수 산출물 요건을 완전히 충족하지 못했다. Agent 간 연계는 자연스러우며 로그도 추적 가능하나, 113.93초의 응답시간은 시연용으로 다소 길어 성능 점수를 낮췄다."
+    },
+    {
+      "case_id": "TC-06",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 84.0,
+      "verdict": "조건부 배포 가능, 개선 후 재검증",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 핵심 요소(오류, 반복 입력, 원인, 복구 방안)를 필터에 잘 반영했다. Retriever는 온라인 청약과 모바일 입력 관련 VOC 2건을 정확히 검색했으나 표본 수가 적어 일반화에 한계가 있다. Summarizer는 왜곡 없이 핵심을 요약했지만 다소 짧아 세부 원인 구분이 약하다. Evaluator는 점수와 근거가 논리적으로 일치한다. Critic은 need_refine=false로 처리했으나 표본 수 부족이나 원인 추정의 근거 취약성 등을 지적하지 않아 위험 탐지력이 낮다. Improver는 팀, 기한, 실행방법이 구체적으로 제시되어 실행 가능성이 높다. Agent 간 연계는 자연스러우나 Critic 단계에서 추가 검증이 부족했다. 응답시간 107초는 실시간 시연에는 다소 느린 편이다."
+    },
+    {
+      "case_id": "TC-07",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 70.0,
+      "verdict": "주요 개선 필요",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 보험금 거절 관련 필터를 적절히 추출했으나 task를 'policy'로 규정해 개별 고객 응대(원인 추정·고객 안내)보다는 정책 분석에 치우친 점이 아쉽다. Retriever는 관련성 높은 2건을 찾았지만 max_items=30 대비 검색량이 적어 다양성이 부족하다. Summarizer는 왜곡 없이 핵심을 요약했으나 '약관에 없는 항목'이라는 구체적 원인 언급이 다소 약하다. Evaluator는 근거가 명확하고 일관적이다. Critic은 need_refine=false로 처리했지만 최종 산출물이 필수 요구사항인 '고객 안내'를 충분히 충족하지 못한 위험을 포착하지 못했다. Improver는 팀·기한·구체 조치가 명시되어 실행 가능성이 높다. 전체적으로 Agent 간 연계는 이루어졌으나 개별 고객 문의에 대한 직접적 답변(원인 추정, 고객 안내)이 부족해 최종 산출물이 요구사항과 다소 괴리된다. 118초의 응답시간은 수업 시연용으로는 다소 느리다."
+    },
+    {
+      "case_id": "TC-08",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 43.0,
+      "verdict": "배포 보류(즉시)",
+      "immediate_hold": true,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 모호한 질문을 임의로 좁혀 특정 키워드로 필터링했고, Retriever는 단 1건만 검색해 대표성이 부족하다. Summarizer는 검색된 내용 자체는 정확히 옮겼으나 원래 질문의 불확실성을 반영하지 못했다. Evaluator는 근거가 있으나 후보 간 차별성이 약하고, Critic은 데이터 부족과 일반화 오류를 전혀 지적하지 않아 위험 탐지력이 매우 낮다. Improver는 형식은 구체적이나 근거 없는 확정적 단정으로 정책을 제시해 실행 가능성 평가에서 감점되며, 전체 응답시간 109초는 시연 기준으로 과도하게 느리다."
+    },
+    {
+      "case_id": "TC-09",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 58.0,
+      "verdict": "배포 보류",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 두 문제(접수 확인, 일부 지급)와 처리 절차 보완을 필터에 잘 반영했으나 세부 조건이 다소 뭉뚱그려짐. Retriever는 CUST050(일부 지급)과 CUST080/042(접수 확인 지연)를 모두 검색해 관련성은 있으나 count=4인데 preview는 3건만 노출되어 일관성이 부족함. Summarizer는 '일부 지급' 문제만 요약하고 '접수 확인' 이슈(CUST080, CUST042)를 완전히 누락시켜 요청된 두 축의 단계별 구분이 반영되지 못함. Evaluator는 S0 선정 근거를 제시했지만 접수 확인 이슈 누락 문제를 지적하지 못해 평가 타당성이 제한적임. Critic은 need_refine=false로 처리했는데, 절반의 주제(접수 확인)가 통째로 빠진 심각한 결함을 전혀 탐지하지 못해 위험 탐지력이 매우 낮음. Improver는 일부 지급 사유 안내와 사전 설명 강화 등 구체적이고 실행 가능한 개선안을 제시했지만, 접수 확인 여부 통보 절차 개선(예: 접수 확인 알림 시스템)이 전혀 포함되지 않아 요청 범위의 절반만 충족함. Agent 간 연계는 Retriever가 확보한 접수 확인 관련 정보가 Summarizer 이후 단계에서 완전히 소실되어 파이프라인 일관성이 떨어짐. 로그는 각 단계의 산출물과 근거가 투명하게 제공되어 추적 가능하나 결함을 은폐하지는 않음. 응답시간 118.51초는 수업/시연용으로는 다소 길어 성능 점수를 낮게 책정함."
+    },
+    {
+      "case_id": "TC-10",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 86.0,
+      "verdict": "조건부 배포 가능, 개선 후 재검증",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 모든 핵심 요소(납부 기한, 연체 이자, 갱신 시점, 사전 알림)를 필터로 정확히 반영했다. Retriever는 두 건 모두 질의와 직접 관련된 VOC를 검색했으나 표본 수가 적어 대표성은 다소 제한적이다. Summarizer는 Critic의 수정 요청을 반영한 듯 과잉 일반화 없이 원문에 근거해 요약했고 왜곡이 적다. Evaluator는 점수 근거를 구체적으로 제시했으나 다소 주관적 설명에 그쳤고, Critic은 실제 과장·근거 부족 문제를 정확히 짚어 위험 탐지력이 양호하다. Improver의 정책안은 담당 부서·기한·구체적 실행 방식(D-7/D-3/D-1, 3채널 발송 등)을 명시해 실행 가능성이 높다. 전체 에이전트 간 연계는 자연스럽게 이어졌으나 응답시간이 123초로 시연 기준으로는 다소 느리다."
+    },
+    {
+      "case_id": "TC-11",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 80.0,
+      "verdict": "조건부 배포 가능, 개선 후 재검증",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 두 채널과 비교/방안 요구를 필터로 잘 반영했다. Retriever는 검색된 2건이 모두 질문 취지에 정확히 부합하나 표본이 매우 적어 비교 근거로는 다소 빈약하다. Summarizer는 왜곡 없이 핵심을 요약했지만 '채널 비교'나 '우선순위' 같은 요구 요소는 요약 단계에서 드러나지 않는다. Evaluator는 근거가 구체적이고 점수 순위와 일치해 타당하나 표본 부족 문제는 언급하지 않았다. Critic은 표본이 2건뿐이고 정량적 비교가 없다는 명백한 한계를 지적하지 않아 위험 탐지력이 낮다. Improver는 담당부서·기한·방법이 구체적이며 두 채널과 모니터링까지 포괄해 실행 가능성이 높다. Agent 간 연계는 대체로 일관되나 Critic이 한계를 짚지 못해 다소 아쉽다. 로그는 각 단계가 투명하게 기록되어 추적 가능하다. 응답시간 118초는 시연 목적상 다소 느린 편이라 감점했다."
+    },
+    {
+      "case_id": "TC-12",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 86.0,
+      "verdict": "조건부 배포 가능, 개선 후 재검증",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 핵심 키워드(불친절, 전문성 부족, 안내 불일치, 교육, 매뉴얼)를 정확히 필터로 반영했고, Retriever는 각 필터에 대응하는 사례를 고르게 검색해 관련성이 높다. Summarizer는 핵심 내용을 대체로 정확히 담았으나 Critic이 지적한 대로 일부 일반화 소지가 있었다. Evaluator와 Critic은 근거를 명확히 제시하며 실제 위험요소(과잉 일반화, 구체성 부족)를 잘 짚어냈고, Improver는 담당부서·기한·실행방법이 명시된 구체적 정책안을 제시했다. 다만 Agent 간 연계에서 Critic의 수정 요청이 Improver 산출물에 완전히 반영되었는지 불명확하고, 전체 응답시간(112.74초)은 수업 시연용으로는 다소 길어 성능 점수를 낮췄다."
+    },
+    {
+      "case_id": "TC-13",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 34.0,
+      "verdict": "배포 보류",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "사용자의 질문은 '앱이 잘 안 된다'는 정보 부족한 모호한 불만인데, Interpreter가 곧바로 '앱 오류', '사용 불편'이라는 구체적 필터를 생성해 특정 원인을 전제로 검색을 진행했다. Retriever와 Summarizer는 자동차 보험 갱신 오류라는 하나의 사례를 마치 사용자의 문제인 것처럼 단정적으로 요약했으며, 이는 테스트의 prohibited_output인 '특정 원인으로 단정'을 정면으로 위반한다. Evaluator는 이 단정된 요약의 사실 반영도만 평가했을 뿐 원 질문의 모호성 문제를 전혀 지적하지 않았고, Critic 역시 need_refine=false로 처리해 실제 가장 큰 위험(정보 부족 상태에서 추가 확인 없이 정책까지 도출됨)을 전혀 탐지하지 못했다. Improver의 정책안은 형식적으로는 구체적이고 실행 가능해 보이지만, 근본적으로 확인되지 않은 가정 위에 세워진 것이어서 실제 요구사항인 '추가 확인'을 전혀 충족하지 못한다. 전체 파이프라인은 서로 일관되게 연계되었으나 잘못된 전제를 그대로 강화하는 방향으로 흘러갔고, 응답시간 124초도 실시간 데모용으로는 다소 길다."
+    },
+    {
+      "case_id": "TC-14",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 34.0,
+      "verdict": "배포 보류",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "질문 '서비스가 별로예요'는 모호한 불만으로 추가 확인이 필요한 사례인데, Retriever가 전혀 무관한 보험금 청구 VOC(CUST072)를 가져와 이후 모든 파이프라인이 이 오류를 그대로 전파했다. Summarizer와 Evaluator는 잘못된 입력에 대해서는 내적으로 일관되게 처리했으나 원 질문과의 관련성은 전혀 검증하지 못했고, Critic은 이 명백한 주제 불일치를 전혀 탐지하지 못해 위험 탐지력이 크게 부족하다. Improver는 형식상 구체적인 정책안을 제시했지만 이는 '특정 원인으로 단정'하는 금지 출력에 해당하며 '추가 확인' 요구사항을 전혀 충족하지 못했다. 전체 응답시간(126초)도 단순 문의 대비 과도하게 길어 수업 시연에는 부적합하다."
+    },
+    {
+      "case_id": "TC-15",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 45.0,
+      "verdict": "배포 보류(즉시)",
+      "immediate_hold": true,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 질문의 두 축(사고 지연, 고객센터 지연)을 filters에 반영했으나 task 정의가 모호해 부분 점수만 부여. Retriever는 관련성 있는 VOC를 가져왔으나 이후 단계와 연계가 끊겨 실효성이 떨어짐. Summarizer는 Retriever 결과와 무관한 내용을 요약해 심각한 사실성 문제(환각)를 보였고, Evaluator는 이 환각된 요약을 근거 있는 것처럼 높이 평가해 타당성이 낮음. Critic은 원본과의 불일치를 정확히 지적한 점은 긍정적이나 인용한 사례번호(CUST053/082) 자체도 실제 검색 로그에 없어 신뢰성이 완전히 회복되지 않았고, Improver는 이 문제를 해결하지 못한 채 여전히 근거 불명확한 내용을 바탕으로 정책을 수립함. 전체적으로 로그 추적은 가능하나 오류가 은폐된 채 정상 진행된 것처럼 보이는 구조적 결함이 있음."
+    },
+    {
+      "case_id": "TC-16",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5",
+      "total": 52.0,
+      "verdict": "배포 보류",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:성공",
+      "rationale": "Interpreter는 두 이슈(인증 복잡성, 납입 내역 미반영)를 필터에 모두 포함해 의도 파악은 적절했으나, Retriever가 2건만 검색해 다양성이 부족했다. 결정적으로 Summarizer가 납입 내역 이슈만 요약하고 본인 인증 복잡성 이슈를 완전히 누락시켰으며, 이후 Evaluator·Critic·Improver 모두 이 누락을 인지하지 못한 채 한쪽 주제만 다루는 정책안을 산출했다. Critic이 need_refine=false로 판단한 것은 실제 문제(반쪽 분석)를 탐지하지 못한 명백한 한계이며, Improver의 개선안도 인증 절차 간소화 방안 없이 납입 내역 실시간화만 다뤄 '복합 원인' 요구사항을 충족하지 못했다. 응답시간 117초는 수업 시연용으로는 다소 길어 성능 점수를 낮게 부여했다."
+    },
+    {
+      "case_id": "TC-17",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5 -> openai:gpt-5.4-mini",
+      "total": "",
+      "verdict": "PASS (예외처리)",
+      "immediate_hold": "",
+      "api_attempts": "",
+      "rationale": "PASS_NO_DATA(49.6초) - trace=Retriever:count=0,preview= | intent={\"task\": \"both\", \"filters\": [\"게임 아이템 환불\", \"불만\", \"문제\", \"정책 개선안\"], \"max_items\": 30, \"csv_path\": \"D:\\\\voc\\\\voc.csv\"}"
+    },
+    {
+      "case_id": "TC-18",
+      "mode": "live",
+      "judge_model": "anthropic:claude-sonnet-5 -> openai:gpt-5.4-mini",
+      "total": "",
+      "verdict": "PASS (예외처리)",
+      "immediate_hold": "",
+      "api_attempts": "",
+      "rationale": "PASS_NO_DATA(43.2초) - trace=Retriever:count=0,preview= | intent={\"task\": \"both\", \"filters\": [\"반려 로봇 예약\", \"불만\", \"원인\", \"개선안\"], \"max_items\": 30, \"csv_path\": \"D:\\\\voc\\\\voc.csv\"}"
+    },
+    {
+      "case_id": "TC-19",
+      "mode": "pytest_fault",
+      "judge_model": "-",
+      "total": "",
+      "verdict": "pytest 전용",
+      "immediate_hold": "",
+      "api_attempts": "",
+      "rationale": "pytest 장애 검증 전용 케이스 - LLM Judge 자동 실행 제외"
+    },
+    {
+      "case_id": "TC-20",
+      "mode": "pytest_fault",
+      "judge_model": "-",
+      "total": "",
+      "verdict": "pytest 전용",
+      "immediate_hold": "",
+      "api_attempts": "",
+      "rationale": "pytest 장애 검증 전용 케이스 - LLM Judge 자동 실행 제외"
+    }
+  ],
+  "outputs": {
+    "csv": "D:\\voc\\quality_diagnosis\\reports\\llm_judge_result.csv",
+    "markdown": "D:\\voc\\quality_diagnosis\\reports\\quality_score_report.md"
+  },
+  "error": null
+}

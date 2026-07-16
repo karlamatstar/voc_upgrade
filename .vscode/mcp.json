@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "vocMcp": {
+      "type": "stdio",
+      "command": "d:\\voc\\.venv\\Scripts\\python.exe",
+      "args": [
+        "d:\\voc\\main.py"
+      ],
+      "cwd": "d:\\voc"
+    }
+  }
+}

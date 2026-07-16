@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "run_id": "20260716_110439_067085",
+  "runner": "pytest",
+  "run_type": "full_or_custom",
+  "status": "completed",
+  "started_at": "2026-07-16T11:04:39+09:00",
+  "finished_at": "2026-07-16T11:04:44+09:00",
+  "duration_seconds": 5.248,
+  "python_version": "3.14.5",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "working_directory": "D:\\voc",
+  "arguments": [
+    "quality_diagnosis/test_cross_validation.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.pytest_temp_cross_run_fix"
+  ],
+  "counts": {
+    "collected": 6,
+    "passed": 6,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "tests": [
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_experiment_matrix_has_four_fixed_groups",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0153
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_cross_validation_uses_separate_a_to_d_folders",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_locked_environment_disables_retry_and_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_locked_judge_configures_only_requested_provider",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 4.9776
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_generation_failure_is_na_and_next_case_can_continue",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0025
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_comparison_report_contains_case_detail_and_graph_csv",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0336
+    }
+  ],
+  "exit_status": 0
+}

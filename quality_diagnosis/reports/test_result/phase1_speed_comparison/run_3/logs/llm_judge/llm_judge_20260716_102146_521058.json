@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "20260716_102146_521058",
+  "runner": "llm_judge",
+  "status": "completed",
+  "started_at": "2026-07-16T10:21:46+09:00",
+  "finished_at": "2026-07-16T10:22:16+09:00",
+  "configured_models": "anthropic:claude-sonnet-5 -> openai:gpt-5.4-mini",
+  "case_counts": {
+    "total_defined": 1,
+    "judge_target": 1,
+    "processed": 1,
+    "scored": 1,
+    "na": 0,
+    "not_scored": 0
+  },
+  "case_results": [
+    {
+      "case_id": "TC-01",
+      "mode": "live",
+      "judge_model": "openai:gpt-5.4-mini",
+      "total": 75.0,
+      "verdict": "주요 개선 필요",
+      "immediate_hold": false,
+      "api_attempts": "anthropic:1회 실패; openai:성공",
+      "pipeline_seconds": 19.49,
+      "judge_seconds": 5.89,
+      "total_seconds": 25.38,
+      "rationale": "Interpreter는 모바일 앱 자동차보험 갱신 오류와 갱신 안내 문자 지연이라는 질문 의도를 대부분 반영했고 검색 필터도 적절합니다. 다만 검색 의도가 both로 넓고, 질문의 핵심인 ‘문자 지연’까지 동등하게 다루는 정교함은 부족합니다. Retriever는 실제로 갱신 오류 사례와 안내 문자 지연 사례를 각각 찾아 관련성은 높습니다. 다만 preview가 2건뿐이라 원인 분석용 근거 폭은 제한적입니다. Summarizer는 앱 갱신 오류와 콜센터 전환, 디지털 채널 안정성 개선을 정확히 요약했지만 문자 지연 사례와 원인·재발 방지의 범위는 누락했습니다. 핵심 불만은 유지했으나 두 사례를 통합한 종합 요약으로는 부족합니다. Evaluator는 S0를 최고로 선택한 근거가 대체로 타당하나, 문자 지연 사례가 포함되지 않아 평가 범위가 편향되었습니다. 점수 차이의 설명도 무난하지만 엄밀한 비교 기준은 다소 약합니다. Critic은 need_refine=false로 두고 구체적 한계나 누락을 짚지 않아 위험 탐지력이 매우 낮습니다. 특히 문자 지연, 재발 방지의 세부 보완 필요성을 놓쳤습니다. Improver는 오류 재현, 회귀테스트, 안내 메시지 개선, 대체 경로 제공 등 실행 가능한 개선안을 제시해 실무성이 높습니다. 다만 원인 진단이 다소 일반론적이고, 갱신 안내 문자 지연에 대한 직접 처방은 상대적으로 약합니다. Agent 연계는 전반적으로 앞 단계 요약과 평가를 후속 정책안으로 잘 연결했지만, 문자 지연 VOC의 반영이 약해 일부 단절이 있습니다. 장애 대응·로그는 타임링크와 각 단계 추적 정보가 있어 양호하나, 검색 실패나 누락에 대한 경고 수준은 아닙니다. 성능은 18.73초로 시연용으로는 허용 가능 범위입니다."
+    }
+  ],
+  "outputs": {
+    "csv": "D:\\voc\\quality_diagnosis\\reports\\test_result\\phase1_speed_comparison\\run_3\\llm_judge_result.csv",
+    "markdown": "D:\\voc\\quality_diagnosis\\reports\\test_result\\phase1_speed_comparison\\run_3\\quality_score_report.md"
+  },
+  "error": null
+}

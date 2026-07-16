@@ -1,0 +1,133 @@
+{
+  "description": "VOC Improve QA 테스트 케이스. 질문과 기대 결과를 한 항목에서 함께 관리한다. 권장·확장·복합 유형은 voc.csv 문장 복사가 아니라 여러 VOC를 검색·종합하는 분석 요청을 중심으로 구성하고, 오타·모호함·데이터 없음·장애 유형은 별도 대응 능력을 검증한다. expect_no_data=true인 케이스는 Retriever가 0건을 찾는 것이 정답이며, 0건이면 llm_judge.py가 PASS(예외처리)로 분류하고 평균 점수 계산에서 제외한다.",
+  "cases": [
+    {
+      "case_id": "TC-01", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "모바일 앱 갱신 오류와 갱신 안내 문자가 늦게 도착하는 자동차 보험 사례의 원인과 재발 방지 방안을 정리해 주세요.",
+      "expected_intent": "모바일 앱 자동차 보험 갱신 오류의 원인과 재발 방지 방안 분석",
+      "expected_keywords": ["모바일 앱", "자동차 보험", "갱신", "오류"],
+      "required_output": ["관련 VOC 요약", "원인 추정", "개선안", "우선순위"],
+      "prohibited_output": ["결제 확정", "개인정보 요구", "고객 기기 문제로 단정"]
+    },
+    {
+      "case_id": "TC-02", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "팩스·이메일 보험 청구 서류 접수 확인 문제를 비교하고 확인 절차 보완 방안을 정리해 주세요.",
+      "expected_intent": "팩스·이메일 청구 서류 접수 확인 문제 비교와 확인 절차 보완",
+      "expected_keywords": ["청구 서류", "팩스", "이메일", "접수"],
+      "required_output": ["공통 불편", "고객 안내", "개선안", "우선순위"],
+      "prohibited_output": ["접수 완료로 확정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-03", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "보험금 지급 지연과 지급 사유 설명 부족의 공통 원인 및 처리 안내 방안을 정리해 주세요.",
+      "expected_intent": "보험금 지급 지연과 지급 사유 설명 부족의 공통 원인 및 처리 안내 분석",
+      "expected_keywords": ["보험금", "지급", "지연", "설명"],
+      "required_output": ["공통 문제", "고객 영향", "원인 추정", "개선안", "우선순위"],
+      "prohibited_output": ["지급 완료로 확정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-04", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "보험 약관·보장·면책 조건의 설명 부족 문제와 고객 이해도 향상 방안을 정리해 주세요.",
+      "expected_intent": "약관·보장·면책 조건의 설명 부족과 고객 이해도 향상 방안 분석",
+      "expected_keywords": ["약관", "보장", "설명"],
+      "required_output": ["공통 문제", "고객 영향", "개선안", "고객 안내"],
+      "prohibited_output": ["고객 이해력 부족으로 단정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-05", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "자동차 사고 접수 후 담당자 배정·긴급 지원·후속 처리 지연의 원인과 처리시간 단축 방안을 정리해 주세요.",
+      "expected_intent": "자동차 사고 접수 후 담당자 배정·긴급 지원·후속 처리 지연 원인 분석",
+      "expected_keywords": ["사고", "담당자", "지연"],
+      "required_output": ["지연 구간", "고객 영향", "개선안", "우선순위"],
+      "prohibited_output": ["담당자 배정 완료로 확정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-06", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "온라인 보험 청약과 모바일 입력 중 오류·반복 입력의 원인과 입력 복구 방안을 정리해 주세요.",
+      "expected_intent": "온라인 보험 청약·모바일 입력 오류와 반복 입력의 원인 및 복구 방안 분석",
+      "expected_keywords": ["온라인", "청약", "오류", "입력"],
+      "required_output": ["관련 VOC 요약", "원인 추정", "고객 안내", "개선안"],
+      "prohibited_output": ["입력 실수로 단정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-07", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "보험금청구했는데 약관에없는항목이라고 거절됫어요",
+      "expected_intent": "오타가 포함된 보험금 청구 거절 문의",
+      "expected_keywords": ["보험금", "청구", "거절"],
+      "required_output": ["원인 추정", "고객 안내"],
+      "prohibited_output": ["질문 이해 불가", "지급 완료로 확정", "개인정보 요구"],
+      "note": "오타와 띄어쓰기 오류가 있는 단일 고객 발화 이해 능력을 확인하기 위해 원문형 질문을 유지한다."
+    },
+    {
+      "case_id": "TC-08", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "모바일 앱이 이상해요.",
+      "expected_intent": "원인이 불명확한 앱 이상",
+      "expected_keywords": ["앱"],
+      "required_output": ["추가 확인", "고객 안내"],
+      "prohibited_output": ["특정 장애로 단정", "개인정보 요구", "정상이라고 단정"],
+      "note": "정보가 부족한 단일 고객 발화에서 추가 확인을 요청하는지 검증하기 위해 유지한다."
+    },
+    {
+      "case_id": "TC-09", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "보험 청구 서류 접수 확인과 보험금 일부 지급 문제를 단계별로 구분하고 처리 절차 보완 방안을 정리해 주세요.",
+      "expected_intent": "청구 서류 접수 확인과 보험금 일부 지급 문제의 단계별 분석",
+      "expected_keywords": ["청구 서류", "접수", "일부 지급"],
+      "required_output": ["단계별 문제", "복합 원인", "고객 안내", "개선안", "우선순위"],
+      "prohibited_output": ["전액 지급 확정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-10", "category": "권장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "보험료 납부 기한·연체 이자·갱신 시점의 사전 알림 문제와 알림 시점 보완 방안을 정리해 주세요.",
+      "expected_intent": "보험료 납부·연체 이자·갱신 시점의 사전 알림과 알림 시점 보완 분석",
+      "expected_keywords": ["보험료", "연체", "갱신", "안내"],
+      "required_output": ["공통 문제", "고객 영향", "알림 정책", "개선안"],
+      "prohibited_output": ["연체 이자 면제 확정", "개인정보 요구"]
+    },
+    {
+      "case_id": "TC-11", "category": "확장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "전화 고객센터 대기와 온라인 상담 응답 지연을 비교하고 채널별 대기시간 단축 방안을 정리해 주세요.",
+      "expected_intent": "전화 고객센터와 온라인 상담의 지연 비교 및 채널별 단축 방안 분석", "expected_keywords": ["고객센터", "온라인 상담", "대기", "응답"],
+      "required_output": ["채널 비교", "고객 영향", "개선안", "우선순위"], "prohibited_output": ["개인정보 요구"]
+    },
+    {
+      "case_id": "TC-12", "category": "확장 VOC", "judge_enabled": true, "judge_mode": "live", "question": "보험 상담 직원의 불친절·전문성 부족·안내 불일치 원인과 교육·매뉴얼 보완 방안을 정리해 주세요.",
+      "expected_intent": "보험 상담 직원의 태도·전문성·안내 일관성과 교육·매뉴얼 보완 분석", "expected_keywords": ["불친절", "전문성", "안내"],
+      "required_output": ["공통 문제", "고객 영향", "교육 또는 매뉴얼 개선", "우선순위"], "prohibited_output": ["개인정보 요구"]
+    },
+    {
+      "case_id": "TC-13", "category": "모호한 질문", "judge_enabled": true, "judge_mode": "live", "question": "앱을 쓰는데 뭔가 잘 안 돼요.",
+      "expected_intent": "정보가 부족한 모호한 앱 불만", "expected_keywords": ["앱"],
+      "required_output": ["추가 확인"], "prohibited_output": ["특정 원인으로 단정"],
+      "note": "'앱'을 최소 앵커 단어로 넣어 완전히 무매칭(0건)이 되지 않도록 함. 여전히 구체적 불만 내용은 없어 모호함 테스트 취지는 유지."
+    },
+    {
+      "case_id": "TC-14", "category": "모호한 질문", "judge_enabled": true, "judge_mode": "live", "question": "서비스가 별로예요.",
+      "expected_intent": "모호한 서비스 불만", "expected_keywords": ["서비스"],
+      "required_output": ["추가 확인"], "prohibited_output": ["특정 원인으로 단정"],
+      "note": "'서비스'가 voc.csv 여러 행(긴급 서비스, 원스톱 서비스, 글로벌 서비스 등)에 등장해 단어 단위 매칭으로 검색될 가능성이 높음."
+    },
+    {
+      "case_id": "TC-15", "category": "복합 불만", "judge_enabled": true, "judge_mode": "live", "question": "자동차 사고 처리 지연과 고객센터 연결 지연이 함께 발생할 때의 영향과 처리 순서를 정리해 주세요.",
+      "expected_intent": "자동차 사고 처리 지연과 고객센터 연결 지연의 복합 영향 및 처리 순서 분석", "expected_keywords": ["사고", "고객센터", "지연"],
+      "required_output": ["복합 원인", "연계 영향", "개선안", "우선순위"], "prohibited_output": ["처리 완료로 확정"]
+    },
+    {
+      "case_id": "TC-16", "category": "복합 불만", "judge_enabled": true, "judge_mode": "live", "question": "모바일 앱 본인 인증 복잡성과 보험료 납입 내역 미반영의 원인 및 화면·처리 절차 보완 방안을 정리해 주세요.",
+      "expected_intent": "본인 인증 복잡성과 납입 내역 미반영의 원인 및 화면·처리 절차 보완 분석", "expected_keywords": ["모바일 앱", "본인 인증", "납입 내역"],
+      "required_output": ["복합 원인", "고객 영향", "개선안", "우선순위"], "prohibited_output": ["정상 처리로 확정"]
+    },
+    {
+      "case_id": "TC-17", "category": "데이터 없음", "judge_enabled": true, "judge_mode": "live", "expect_no_data": true, "question": "현재 VOC 데이터에서 게임 아이템 환불 관련 불만을 찾아 문제와 정책 개선안을 분석해 주세요.",
+      "expected_intent": "관련 VOC 데이터 없음", "expected_keywords": [],
+      "required_output": ["관련 데이터 없음"], "prohibited_output": ["존재하는 정책으로 안내"],
+      "note": "voc.csv와 무관한 주제 - Retriever 0건이 기대 결과. expect_no_data=true라 0건이면 PASS(예외처리)로 분류되고 평균 점수 계산에서는 제외된다."
+    },
+    {
+      "case_id": "TC-18", "category": "데이터 없음", "judge_enabled": true, "judge_mode": "live", "expect_no_data": true, "question": "현재 VOC 데이터에서 반려 로봇 예약 관련 불만을 찾아 원인과 개선안을 분석해 주세요.",
+      "expected_intent": "관련 VOC 데이터 없음", "expected_keywords": [],
+      "required_output": ["관련 데이터 없음"], "prohibited_output": ["예약 상태 확정"],
+      "note": "TC-17과 동일. expect_no_data=true."
+    },
+    {
+      "case_id": "TC-19", "category": "장애 상황", "judge_enabled": false, "judge_mode": "pytest_fault", "question": "보험금 지급 관련 불만을 분석해 주세요.",
+      "fault": "retriever_down", "expected_intent": "Retriever 중단 시 명확한 오류 표시",
+      "expected_keywords": [], "required_output": ["오류 또는 실패 안내"],
+      "prohibited_output": ["정상적으로 검색되었습니다"]
+    },
+    {
+      "case_id": "TC-20", "category": "장애 상황", "judge_enabled": false, "judge_mode": "pytest_fault", "question": "자동차 사고 관련 불만을 분석해 주세요.",
+      "fault": "csv_missing", "expected_intent": "CSV 누락 시 데이터 파일 오류 안내",
+      "expected_keywords": [], "required_output": ["파일 오류 안내"],
+      "prohibited_output": ["정상 분석 완료"]
+    }
+  ]
+}

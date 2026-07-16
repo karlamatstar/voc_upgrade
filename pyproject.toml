@@ -1,0 +1,29 @@
+[project]
+name = "12-voc-improve"
+version = "0.1.0"
+description = "수강 과제 및 팀 비교 발표용 멀티 에이전트 VOC 분석·품질 진단 프로젝트"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=0.116,<1",
+    "grpcio>=1.82,<2",
+    "grpcio-tools>=1.82,<2",
+    "mcp>=1.28,<2",
+    "openai>=2.45,<3",
+    "protobuf>=7.35,<8",
+]
+
+[project.optional-dependencies]
+qa = [
+    "pytest>=9.1,<10",
+]
+reports = [
+    "python-docx>=1.2,<2",
+    "python-pptx>=1.0,<2",
+]
+
+[project.scripts]
+voc-preflight = "utils.preflight:main"
+
+[tool.pytest.ini_options]
+testpaths = ["quality_diagnosis"]

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "run_id": "20260716_094634_957434",
+  "runner": "pytest",
+  "run_type": "llm_judge_unit",
+  "status": "completed",
+  "started_at": "2026-07-16T09:46:34+09:00",
+  "finished_at": "2026-07-16T09:46:35+09:00",
+  "duration_seconds": 0.304,
+  "python_version": "3.14.5",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "working_directory": "D:\\voc",
+  "arguments": [
+    "quality_diagnosis\\test_llm_judge.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=D:\\voc\\.pytest_temp_single_case_cli"
+  ],
+  "counts": {
+    "collected": 14,
+    "passed": 14,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "tests": [
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_rubric_total_is_100",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_rubric_has_nine_agent_criteria",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_judge_cases_loadable",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0007
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_build_judge_prompt_contains_inputs",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_parse_judge_response_valid",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0006
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_parse_judge_response_clips_overflow",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_parse_judge_response_invalid_returns_none",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[95-False-\\ubc30\\ud3ec \\uac00\\ub2a5]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[85-False-\\uc870\\uac74\\ubd80 \\ubc30\\ud3ec \\uac00\\ub2a5, \\uac1c\\uc120 \\ud6c4 \\uc7ac\\uac80\\uc99d]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[75-False-\\uc8fc\\uc694 \\uac1c\\uc120 \\ud544\\uc694]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[50-False-\\ubc30\\ud3ec \\ubcf4\\ub958]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[95-True-\\ubc30\\ud3ec \\ubcf4\\ub958(\\uc989\\uc2dc)]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0014
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_llm_judge_module_importable",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0032
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_judge_empty_row_preserves_stage_timings",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    }
+  ],
+  "exit_status": 0
+}

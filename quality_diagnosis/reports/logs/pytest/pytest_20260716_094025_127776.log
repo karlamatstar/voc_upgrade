@@ -1,0 +1,13 @@
+run_id: 20260716_094025_127776
+run_type: full_or_custom
+status: completed
+started_at: 2026-07-16T09:40:25+09:00
+finished_at: 2026-07-16T09:40:25+09:00
+duration_seconds: 0.171
+counts: {"collected": 4, "passed": 4, "failed": 0, "errors": 0, "skipped": 0, "xfailed": 0, "xpassed": 0}
+
+[test results]
+PASSED  quality_diagnosis/test_llm_retry.py::test_retry_succeeds_on_third_attempt (0.003s, call)
+PASSED  quality_diagnosis/test_llm_retry.py::test_retry_failure_records_three_attempts (0.0015s, call)
+PASSED  quality_diagnosis/test_llm_retry.py::test_non_retryable_auth_error_stops_immediately (0.0013s, call)
+PASSED  quality_diagnosis/test_llm_retry.py::test_report_excludes_na_from_average (0.0307s, call)

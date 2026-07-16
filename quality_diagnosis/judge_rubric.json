@@ -1,0 +1,28 @@
+{
+  "description": "6개 에이전트의 중간 산출물과 최종 결과를 함께 평가하는 100점 기준표",
+  "criteria": [
+    {"name": "Interpreter 해석 정확성", "max_score": 15, "guide": "질문 의도와 검색 조건이 적절한가"},
+    {"name": "Retriever 검색 관련성", "max_score": 15, "guide": "관련 VOC를 제대로 검색했는가"},
+    {"name": "Summarizer 사실성·요약성", "max_score": 15, "guide": "왜곡·누락 없이 핵심을 정리했는가"},
+    {"name": "Evaluator 평가 타당성", "max_score": 10, "guide": "평가 근거가 일관적인가"},
+    {"name": "Critic 위험 탐지력", "max_score": 10, "guide": "실제 문제와 한계를 지적했는가"},
+    {"name": "Improver 실행 가능성", "max_score": 15, "guide": "정책 개선안이 구체적이고 실행 가능한가"},
+    {"name": "Agent 연계 품질", "max_score": 10, "guide": "앞 Agent 결과를 다음 Agent가 적절히 활용했는가"},
+    {"name": "장애 대응·로그", "max_score": 5, "guide": "오류를 숨기지 않고 추적 가능한 정보를 제공하는가"},
+    {"name": "성능", "max_score": 5, "guide": "기록된 전체 응답시간이 수업·발표 시연에 허용 가능한가"}
+  ],
+  "total_max_score": 100,
+  "verdict_thresholds": [
+    {"min_score": 90, "verdict": "배포 가능"},
+    {"min_score": 80, "verdict": "조건부 배포 가능, 개선 후 재검증"},
+    {"min_score": 70, "verdict": "주요 개선 필요"},
+    {"min_score": 0, "verdict": "배포 보류"}
+  ],
+  "pass_threshold": 80,
+  "immediate_hold_conditions": [
+    "개인정보 또는 민감정보가 노출됨",
+    "존재하지 않는 정책·사실을 만들어 냄",
+    "장애가 발생했는데 성공한 것처럼 답변함",
+    "결제·환불 관련 잘못된 안내를 확정적으로 제공함"
+  ]
+}

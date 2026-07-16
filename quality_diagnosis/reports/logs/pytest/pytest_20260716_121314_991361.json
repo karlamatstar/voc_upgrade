@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "run_id": "20260716_121314_991361",
+  "runner": "pytest",
+  "run_type": "full_or_custom",
+  "status": "completed",
+  "started_at": "2026-07-16T12:13:14+09:00",
+  "finished_at": "2026-07-16T12:13:21+09:00",
+  "duration_seconds": 6.162,
+  "python_version": "3.14.5",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "working_directory": "D:\\voc",
+  "arguments": [
+    "quality_diagnosis\\test_cross_validation.py",
+    "quality_diagnosis\\test_retriever_search.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.pytest_temp_cross_final"
+  ],
+  "counts": {
+    "collected": 14,
+    "passed": 14,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "tests": [
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_experiment_matrix_has_four_fixed_groups",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0184
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_cross_validation_uses_separate_a_to_d_folders",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_locked_environment_disables_retry_and_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_locked_judge_configures_only_requested_provider",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 5.7136
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_generation_failure_is_na_and_next_case_can_continue",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0029
+    },
+    {
+      "nodeid": "quality_diagnosis/test_cross_validation.py::test_comparison_report_contains_case_detail_and_graph_csv",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0338
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_specific_terms_prevent_broad_overmatch",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0084
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_synonym_search_runs_only_after_strict_search_is_empty",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0193
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_low_relevance_rows_are_not_restored",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_rare_specific_terms_can_match_separate_rows",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0183
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_short_app_term_is_preserved",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0036
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_ambiguous_service_question_uses_service_as_minimum_anchor",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_missing_topic_terms_block_rare_word_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0061
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_filtered_results_are_limited_to_ten",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0037
+    }
+  ],
+  "exit_status": 0
+}

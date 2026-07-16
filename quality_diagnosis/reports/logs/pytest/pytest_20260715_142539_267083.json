@@ -1,0 +1,489 @@
+{
+  "schema_version": 1,
+  "run_id": "20260715_142539_267083",
+  "runner": "pytest",
+  "run_type": "full_or_custom",
+  "status": "completed",
+  "started_at": "2026-07-15T14:25:39+09:00",
+  "finished_at": "2026-07-15T14:35:21+09:00",
+  "duration_seconds": 581.866,
+  "python_version": "3.14.5",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "working_directory": "D:\\voc",
+  "arguments": [
+    "quality_diagnosis",
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "counts": {
+    "collected": 76,
+    "passed": 75,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "tests": [
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_exists[interpreter]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_exists[retriever]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_exists[summarizer]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_exists[evaluator]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_exists[critic]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_exists[improver]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_syntax[interpreter]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0027
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_syntax[retriever]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0138
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_syntax[summarizer]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0042
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_syntax[evaluator]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0024
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_syntax[critic]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0022
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_file_syntax[improver]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0033
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_required_symbols[interpreter]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0032
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_required_symbols[retriever]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0062
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_required_symbols[summarizer]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0047
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_required_symbols[evaluator]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0054
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_required_symbols[critic]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0053
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_required_symbols[improver]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0047
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_has_main_entry[interpreter]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_has_main_entry[retriever]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_has_main_entry[summarizer]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0006
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_has_main_entry[evaluator]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_has_main_entry[critic]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_has_main_entry[improver]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_agent_ports_are_unique",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_voc_csv_exists_and_has_data",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0011
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_proto_file_defines_six_services",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0008
+    },
+    {
+      "nodeid": "quality_diagnosis/test_agent_unit.py::test_recommended_cases_include_expected_results",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.001
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_health_check_missing_csv",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0035
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_health_check_valid_csv",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0022
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_extract_keywords_empty_input",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_extract_keywords_removes_stopwords",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_parse_filters_handles_none",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_analyze_voc_returns_error_dict_when_servers_down",
+      "phase": "call",
+      "outcome": "skipped",
+      "duration_seconds": 0.0014,
+      "detail": "('D:\\\\voc\\\\quality_diagnosis\\\\test_fault_tolerance.py', 59, 'Skipped: Summarizer(6003)가 켜져 있어 서버 다운 시나리오를 재현할 수 없습니다')"
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_analyze_voc_nl_v2_empty_question_safe",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 113.0899
+    },
+    {
+      "nodeid": "quality_diagnosis/test_fault_tolerance.py::test_pipeline_missing_csv_not_silent_success",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0154
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_rubric_total_is_100",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_rubric_has_nine_agent_criteria",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_judge_cases_loadable",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0007
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_build_judge_prompt_contains_inputs",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_parse_judge_response_valid",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0007
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_parse_judge_response_clips_overflow",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_parse_judge_response_invalid_returns_none",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[95-False-\\ubc30\\ud3ec \\uac00\\ub2a5]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[85-False-\\uc870\\uac74\\ubd80 \\ubc30\\ud3ec \\uac00\\ub2a5, \\uac1c\\uc120 \\ud6c4 \\uc7ac\\uac80\\uc99d]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[75-False-\\uc8fc\\uc694 \\uac1c\\uc120 \\ud544\\uc694]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[50-False-\\ubc30\\ud3ec \\ubcf4\\ub958]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_decide_verdict[95-True-\\ubc30\\ud3ec \\ubcf4\\ub958(\\uc989\\uc2dc)]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_judge.py::test_llm_judge_module_importable",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0044
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_retry.py::test_retry_succeeds_on_third_attempt",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0023
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_retry.py::test_retry_failure_records_three_attempts",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0022
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_retry.py::test_non_retryable_auth_error_stops_immediately",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0016
+    },
+    {
+      "nodeid": "quality_diagnosis/test_llm_retry.py::test_report_excludes_na_from_average",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.035
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_mcp_instance_exists",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_required_mcp_tool_registered[analyze_voc]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_required_mcp_tool_registered[analyze_voc_nl_v2]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_required_mcp_tool_registered[health_check]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0004
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_optional_mcp_tool_registered[summarize_voc]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_optional_mcp_tool_registered[policy_from_summary]",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_main_py_runs_mcp_stdio",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_health_check_tool_callable",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0019
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_analyze_voc_tool_end_to_end",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 88.7201
+    },
+    {
+      "nodeid": "quality_diagnosis/test_mcp_tools.py::test_analyze_voc_nl_v2_tool_end_to_end",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 114.4065
+    },
+    {
+      "nodeid": "quality_diagnosis/test_pipeline_e2e.py::test_pipeline_smoke_with_params",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 84.4671
+    },
+    {
+      "nodeid": "quality_diagnosis/test_pipeline_e2e.py::test_pipeline_full_task_both",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 85.8071
+    },
+    {
+      "nodeid": "quality_diagnosis/test_pipeline_e2e.py::test_pipeline_trace_shows_agent_chain",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 85.294
+    },
+    {
+      "nodeid": "quality_diagnosis/test_preflight.py::test_collect_checks_does_not_expose_api_key",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0012
+    },
+    {
+      "nodeid": "quality_diagnosis/test_preflight.py::test_agent_ports_are_informational",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.001
+    },
+    {
+      "nodeid": "quality_diagnosis/test_preflight.py::test_report_marks_required_failure",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_specific_terms_prevent_broad_overmatch",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0112
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_synonym_search_runs_only_after_strict_search_is_empty",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0062
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_low_relevance_rows_are_not_restored",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0106
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_rare_specific_terms_can_match_separate_rows",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.014
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_short_app_term_is_preserved",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0239
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_missing_topic_terms_block_rare_word_fallback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0096
+    },
+    {
+      "nodeid": "quality_diagnosis/test_retriever_search.py::test_filtered_results_are_limited_to_ten",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0055
+    }
+  ],
+  "exit_status": 0
+}

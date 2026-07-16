@@ -1,0 +1,79 @@
+# ============================================================
+# VOC Improve QA - Git 업로드 제외 항목
+# ============================================================
+
+# 1. API 키와 개인 환경설정
+.env
+.env.*
+!.env.example
+
+# 추가 인증서·비밀정보 파일
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+*secret*.json
+
+# 2. Python 가상환경과 패키지 설치 결과
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+
+# 3. Python·테스트·검사 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.pytest_temp*/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# 4. 임시·백업·잠금 파일
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.asd
+*.wbk
+
+# 5. 빌드·배포 생성물
+build/
+dist/
+*.spec.tmp
+
+# 6. 보고서 생성 중간 이미지
+# 최종 DOCX 안에 그래프가 내장되므로 이 폴더는 재생성 가능하다.
+quality_diagnosis/reports/report_assets/
+
+# 7. 로컬 도구 전용 상태
+.codex/
+.idea/
+
+# 8. 운영체제 생성 파일
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 다음 항목은 발표·검증 증적이므로 의도적으로 제외하지 않는다.
+# - .env.example
+# - .agents/mcp_config.json
+# - .vscode/mcp.json
+# - quality_diagnosis/reports/*.csv
+# - quality_diagnosis/reports/*.md
+# - quality_diagnosis/reports/*.docx
+# - quality_diagnosis/reports/logs/
+# - _docs/
+VOC_Improve.zip

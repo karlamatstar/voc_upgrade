@@ -1,0 +1,23 @@
+run_id: 20260716_094634_957434
+run_type: llm_judge_unit
+status: completed
+started_at: 2026-07-16T09:46:34+09:00
+finished_at: 2026-07-16T09:46:35+09:00
+duration_seconds: 0.304
+counts: {"collected": 14, "passed": 14, "failed": 0, "errors": 0, "skipped": 0, "xfailed": 0, "xpassed": 0}
+
+[test results]
+PASSED  quality_diagnosis/test_llm_judge.py::test_rubric_total_is_100 (0.0003s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_rubric_has_nine_agent_criteria (0.0003s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_judge_cases_loadable (0.0007s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_build_judge_prompt_contains_inputs (0.0002s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_parse_judge_response_valid (0.0006s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_parse_judge_response_clips_overflow (0.0004s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_parse_judge_response_invalid_returns_none (0.0002s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_decide_verdict[95-False-\ubc30\ud3ec \uac00\ub2a5] (0.0002s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_decide_verdict[85-False-\uc870\uac74\ubd80 \ubc30\ud3ec \uac00\ub2a5, \uac1c\uc120 \ud6c4 \uc7ac\uac80\uc99d] (0.0002s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_decide_verdict[75-False-\uc8fc\uc694 \uac1c\uc120 \ud544\uc694] (0.0003s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_decide_verdict[50-False-\ubc30\ud3ec \ubcf4\ub958] (0.0002s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_decide_verdict[95-True-\ubc30\ud3ec \ubcf4\ub958(\uc989\uc2dc)] (0.0014s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_llm_judge_module_importable (0.0032s, call)
+PASSED  quality_diagnosis/test_llm_judge.py::test_judge_empty_row_preserves_stage_timings (0.0003s, call)

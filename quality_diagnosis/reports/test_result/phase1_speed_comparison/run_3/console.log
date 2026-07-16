@@ -1,0 +1,16 @@
+[LLM Judge] 호출 순서: anthropic:claude-sonnet-5 -> openai:gpt-5.4-mini
+
+=== TC-01 (live) ===
+  [1/2] TC-01 6개 에이전트 파이프라인 진행 중...
+[파이프라인 1/6] Interpreter 진행 중...
+[파이프라인 1/6] Interpreter 완료 (5.60초)
+[파이프라인] 전체 분석 완료 (18.73초)
+  [1/2] TC-01 파이프라인 완료 (19.49초)
+  [2/2] TC-01 독립 LLM Judge 채점 진행 중...
+  [2/2] TC-01 Judge 완료 (5.89초)
+  [완료] TC-01 전체 소요시간 25.38초
+  총점 75.0점 → 주요 개선 필요
+
+보고서 저장 완료(케이스마다 갱신됨):
+  D:\voc\quality_diagnosis\reports\test_result\phase1_speed_comparison\run_3\llm_judge_result.csv
+  D:\voc\quality_diagnosis\reports\test_result\phase1_speed_comparison\run_3\quality_score_report.md

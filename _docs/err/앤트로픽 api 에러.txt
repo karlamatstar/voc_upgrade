@@ -1,0 +1,12 @@
+
+──────────────────────────────────────────────
+python -m agents.improver  (10:14:50)
+[Improver] gRPC server started on 0.0.0.0:6006
+
+D:\voc\agents\improver.py:177: DeprecationWarning: The model 'claude-sonnet-4-20250514' is deprecated and will reach end-of-life on June 15th, 2026.
+
+Please migrate to a newer model. Visit https://docs.anthropic.com/en/docs/resources/model-deprecations for more information.
+
+  text = await self.llm(prompt.strip(), max_tokens=1024)
+
+
